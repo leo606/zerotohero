@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  dev-api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.dev
+
+    container_name: dev-api
+    ports:
+      - 5000:5000
+    volumes:
+      - ./api:/home/node/app/:z
